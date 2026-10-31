@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --royal-primary: #087B4C;
+  --royal-dark: #064E35;
+  --royal-light: #DCEFE5;
+  --royal-bg: #F5F8F6;
+  --royal-text: #17251F;
+  --background: #F5F8F6;
+  --foreground: #17251F;
+}
+
+@theme inline {
+  --color-royal-primary: #087B4C;
+  --color-royal-dark: #064E35;
+  --color-royal-light: #DCEFE5;
+  --color-royal-bg: #F5F8F6;
+  --color-royal-text: #17251F;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sinhala: "Noto Sans Sinhala", system-ui, sans-serif;
+}
+
+body {
+  background: var(--royal-bg);
+  color: var(--royal-text);
+  font-family: "Noto Sans Sinhala", system-ui, -apple-system, sans-serif;
+  antialiased: true;
+}
+
+/* Custom component classes */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background-color: #087B4C;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  box-shadow: 0 4px 14px -2px rgba(8, 123, 76, 0.25);
+  transition: all 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: #064E35;
+}
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(8, 123, 76, 0.2);
+  background-color: white;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #087B4C;
+  transition: all 0.2s ease;
+}
+.btn-secondary:hover {
+  background-color: #DCEFE5;
+}
+
+.card {
+  border-radius: 1rem;
+  border: 1px solid rgba(8, 123, 76, 0.08);
+  background-color: white;
+  padding: 1.25rem;
+  box-shadow: 0 4px 20px -4px rgba(8, 123, 76, 0.08);
+}
+
+.input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  outline: none;
+  transition: all 0.15s ease;
+}
+.input:focus {
+  border-color: #087B4C;
+  box-shadow: 0 0 0 3px rgba(8, 123, 76, 0.15);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #087B4C;
+  border-radius: 3px;
+}
